@@ -826,3 +826,66 @@ footer {
 .navbar nav a.active {
     color: #00e5ff;
 }
+/* =====================================================
+   PROFILE IMAGE
+   ===================================================== */
+
+.profile-container {
+    width: 330px;
+    height: 330px;
+
+    border-radius: 50%;
+
+    padding: 6px;
+
+    background: linear-gradient(
+        135deg,
+        #00e5ff,
+        transparent 45%,
+        #00e5ff
+    );
+
+    box-shadow:
+        0 0 40px rgba(0, 229, 255, 0.18);
+
+    position: relative;
+
+    animation: profileFloat 4s ease-in-out infinite;
+}
+
+.profile-image {
+    width: 100%;
+    height: 100%;
+
+    object-fit: cover;
+
+    border-radius: 50%;
+
+    display: block;
+
+    border: 5px solid #070b14;
+}
+
+@keyframes profileFloat {
+
+    0% {
+        transform: translateY(0);
+    }
+
+    50% {
+        transform: translateY(-10px);
+    }
+
+    100% {
+        transform: translateY(0);
+    }
+
+}
+@media (max-width: 700px) {
+
+    .profile-container {
+        width: 250px;
+        height: 250px;
+    }
+
+}
